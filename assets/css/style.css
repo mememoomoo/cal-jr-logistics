@@ -1,0 +1,86 @@
+/* Responsive Container */
+.document-container {
+    width: 1200px;
+    margin: auto
+}
+
+@media only screen and (max-width: 1200px) {
+    .document-container {
+        width: 960px
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .document-container {
+        width: 768px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .document-container {
+        width: 550px
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .document-container {
+        width: 380px
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .document-container {
+        width: 320px
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .document-container {
+        width: 300px
+    }
+}
+/* End Responsive Contaienr */
+
+/* Header Section */
+    .header-section {
+        width: 100%;
+        height: 100vh;
+        background-image: url("#");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover
+    }
+/* End Header Section */
+
+/* Navigation Section */
+    .navigation-bar {
+        width: 100%;
+        background-color: transparent;
+        height: 60px;
+    }
+
+    .navigation-content-wrap {
+        display: flex;
+        width: 100%;
+        align-content: center;
+    }
+
+    .logo-container {
+        order: 1;
+        flex: 50%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .menu-container {
+        order: 2;
+        flex: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menu-container nav ol li {
+        display: inline-block;
+    }
+
+/* End Navigation Section */
