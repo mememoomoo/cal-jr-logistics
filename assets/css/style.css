@@ -43,13 +43,100 @@
 
 /* Header Section */
     .header-section {
+        z-index: -10000;
         width: 100%;
         height: 100vh;
-        background-image: url("#");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover
+        background-image: linear-gradient(180deg, #eaa9a9, #FCD8D4);
+        position: relative;
+        overflow: hidden;
     }
+
+    .big-cactus-foreground {
+        z-index: -1;
+        bottom: 0;
+        left: 80%;
+        width: 152px;
+        position: absolute;
+        animation-fill-mode: forwards;
+        animation: 5s linear infinite animation
+    }
+
+    .cactus-foreground-1 {
+        z-index: -2;
+        height: 360px;
+        width: 2000px;
+        left: -100%;
+        bottom: 0;
+        position: absolute;
+    }
+
+    .cactus-foreground-1 {
+        z-index: -2;
+        height: 386px;
+        width: 400vw;
+        background: url("../images/cactus-foreground-1.svg") repeat-x;
+        animation: cactus-foreground 40s linear infinite;
+        position: absolute;
+        bottom: 0;
+        left: 0
+    }
+    .cactus-foreground-2 {
+        z-index: -3;
+        height: 360px;
+        width: 400vw;
+        background: url("../images/cactus-foreground-2.svg") repeat-x;
+        animation: cactus-foreground 50s linear infinite;
+        position: absolute;
+        bottom: 0;
+        left: 0
+    }
+    .cactus-foreground-3 {
+        z-index: -4;
+        height: 370px;
+        width: 400vw;
+        background: url("../images/cactus-foreground-3.svg") repeat-x;
+        animation: cactus-foreground 60s linear infinite;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    @keframes slide {
+        0% {
+            trnasform: translate3d(0,0,0);
+        }
+        100% {
+            transform: translate3d(400px, 0, 0);
+        }
+    }
+
+    .cactus-background-3 {
+        z-index:-4;
+        width: 100%;
+        height: auto;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+    }
+
+    @keyframes cactus-foreground {
+        0% {
+            left: 0;
+        }
+        100% {
+            left: -100%
+        }
+    }
+
+    @keyframes animation {
+        0% {
+            left: 100%
+        }
+        100% {
+            left: -10%
+        }
+    }
+
 /* End Header Section */
 
 /* Navigation Section */
