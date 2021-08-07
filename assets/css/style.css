@@ -543,8 +543,11 @@
         font-family: 'Raleway-Black', sans-serif;
         font-size: 50px;
         font-weight: 900;
-        border-bottom: 4px solid var(--white);
-        padding-right: 10px
+        border-bottom: 12px solid;
+        border-image: linear-gradient(90deg, #ff7882, #020f75 ) 60;
+        padding-right: 18px;
+        padding-left: 2px;
+        line-height: 25px;
     }
 
     .about-copy {
