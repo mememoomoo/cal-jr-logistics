@@ -230,9 +230,117 @@
         left: 0
     }
 
+    .cloud-container {
+        z-index: -7;
+        width: 100%;
+        height: 500px;
+        position: fixed;
+        top: 0;
+        left: 0
+    }
+
+    .cloud-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative
+    }
+
+    .cloud {
+        position: fixed;
+        animation-name: clouds;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 80%
+    }
+
+    #cloud-1 {
+        animation-duration: 200s;
+        top: 10%;
+        left: 50%;
+        background-image: url("../images/cloud-1.svg");
+        width: 300px;
+        height: 80px;
+    }
+
+    #cloud-2 {
+        animation-duration: 100s;
+        top: 12%;
+        left: 100%;
+        background-image: url("../images/cloud-2.svg");
+        width: 300px;
+        height: 54px
+    }
+
+    #cloud-3 {
+        animation-duration: 90s;
+        top: 20%;
+        left: 30%;
+        background-image: url("../images/cloud-3.svg");
+        width: 455px;
+        height: 133px
+    }
+
+    #cloud-4 {
+        animation-duration: 80s;
+        top: 30%;
+        left: 60%;
+        background-image: url("../images/cloud-4.svg");
+        width: 340px;
+        height: 99px
+    }
+
+    #cloud-5 {
+        animation-duration: 300s;
+        top: 140px;
+        left: 80%;
+        background-image: url("../images/cloud-5.svg");
+        width: 420px;
+        height: 84px
+    }
+
+    #cloud-6 {
+        animation-duration: 90s;
+        top: 350px;
+        left: 75%;
+        background-image: url("../images/cloud-6.svg");
+        width: 281px;
+        height: 81px
+    }
+
+    #cloud-7 {
+        animation-duration: 140s;
+        top: 5px;
+        left: 0;
+        background-image: url("../images/cloud-7.svg");
+        width: 287px;
+        height: 50px
+    }
+
+    #cloud-8 {
+        animation-duration: 400s;
+        top: 4px;
+        left: 0;
+        background-image: url("../images/cloud-8.svg");
+        width: 353px;
+        height: 52px
+    }
+
+    #cloud-9 {
+        animation-duration: 40s;
+        top: 10px;
+        left: 0;
+        background-image: url("../images/cloud-9.svg");
+        width: 150px;
+        height: 40px
+    }
+
     .the-sun {
         --sun-size: 250px;
-        z-index: -7;
+        z-index: -8;
         width: var(--sun-size);
         height: var(--sun-size);
         position: absolute;
@@ -245,7 +353,7 @@
     }
 
     .hero-text {
-        z-index: -7;
+        z-index: -8;
         position: absolute;
         width: 500px;
         height: auto;
@@ -263,7 +371,7 @@
     }
 
     .clouds {
-        z-index: -8;
+        z-index: -9;
         width: 100%;
         height: 305px;
         position: fixed;
@@ -276,7 +384,7 @@
     }
 
     .background-lines {
-        z-index: -8;
+        z-index: -9;
         width: 100%;
         height: 685px;
         position: fixed;
@@ -294,6 +402,15 @@
         }
         100% {
             left: -100%
+        }
+    }
+
+    @keyframes clouds {
+        0% {
+            left: 100%
+        }
+        100% {
+            left: -50%
         }
     }
 
