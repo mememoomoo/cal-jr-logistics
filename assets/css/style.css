@@ -15,6 +15,15 @@
     src: url('../fonts/Raleway-VariableFont_wght.ttf') format('ttf');
 }
 
+@font-face {
+    font-family: 'FjallaOne-Regular';
+    src: url('../fonts/FjallaOne-Regular.ttf') format('ttf');
+}
+
+:root {
+    --sun-size: 250px;
+}
+
 /* Responsive Container */
 .document-container {
     width: 1200px;
@@ -136,7 +145,6 @@
     }
 
     .the-sun {
-        --sun-size: 250px;
         z-index: -7;
         width: var(--sun-size);
         height: var(--sun-size);
@@ -147,6 +155,24 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+
+    .hero-text {
+        z-index: -7;
+        position: absolute;
+        width: 500px;
+        height: auto;
+        left: calc(50% - 500px/2);
+        bottom: calc(60% - 500px);
+    }
+
+    .hero-text p {
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Railway', sans-serif;
+        font-size: 50px;
+        font-weight: 800;
     }
 
     .clouds {
@@ -200,7 +226,7 @@
         z-index: 100;
         width: 100%;
         background-color: transparent;
-        height: 60px;
+        position: fixed
     }
 
     .navigation-content-wrap {
@@ -216,17 +242,13 @@
         justify-content: flex-start;
         align-items: center;
         height: auto;
-        width: 200px;
-        margin-top: 10px;
-        margin-bottom: 10px
+        max-width: 200px;
+        margin-top: 5px;
     }
 
-    .logo-container p {
-        font-family: 'Raleway-Black', sans-serif;
-        font-weight: 900;
-        font-size: 45px;
-        color: #fff;
-        text-transform: uppercase
+    .cal-jr-logo {
+        width: 200px;
+        height: auto;
     }
 
     .menu-container {
