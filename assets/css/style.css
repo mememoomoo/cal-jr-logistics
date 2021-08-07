@@ -1,27 +1,28 @@
 @font-face {
-    font-family: 'Raleway-Black';
-    src: url('../fonts/Raleway-Black.ttf') format('ttf');
+    font-family: Raleway-Black;
+    src: url('../fonts/Raleway-Black.ttf');
     font-weight: 900
 }
 
 @font-face {
-    font-family: 'Raleway-Medium';
-    src: url('../fonts/Raleway-Medium.ttf') format('ttf');
+    font-family: Raleway-Medium;
+    src: url('../fonts/Raleway-Medium.ttf');
     font-weight: 400
 }
 
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-VariableFont_wght.ttf') format('ttf');
+    font-family: Raleway;
+    src: url('../fonts/Raleway-VariableFont_wght.ttf');
 }
 
 @font-face {
-    font-family: 'FjallaOne-Regular';
-    src: url('../fonts/FjallaOne-Regular.ttf') format('ttf');
+    font-family: FjallaOne-Regular;
+    src: url('../fonts/FjallaOne-Regular.ttf');
 }
 
 :root {
     --sun-size: 250px;
+    --white: #FFF3E8;
 }
 
 /* Responsive Container */
@@ -69,7 +70,7 @@
 
 /* Header Section */
     .header-section {
-        z-index: -10000;
+        /* z-index: -10000; */
         width: 100%;
         height: 100vh;
         position: relative;
@@ -134,7 +135,7 @@
     .rock-formation-background {
         z-index: -6;
         width: 100%;
-        height: 650px;
+        height: 700px;
         position: fixed;
         background-image: url("../images/rock-formation-background.svg");
         background-repeat: no-repeat;
@@ -163,16 +164,16 @@
         width: 500px;
         height: auto;
         left: calc(50% - 500px/2);
-        bottom: calc(60% - 500px);
+        bottom: calc(55% - 500px);
     }
 
     .hero-text p {
-        color: #fff;
+        color: var(--white);
         text-align: center;
         text-transform: uppercase;
-        font-family: 'Railway', sans-serif;
+        font-family: 'Raleway-Black', sans-serif;
         font-size: 50px;
-        font-weight: 800;
+        font-weight: 900;
     }
 
     .clouds {
@@ -223,7 +224,6 @@
 
 /* Navigation Section */
     .navigation-bar {
-        z-index: 100;
         width: 100%;
         background-color: transparent;
         position: fixed
@@ -252,7 +252,6 @@
     }
 
     .menu-container {
-        z-index: 101;
         order: 2;
         flex: 50%;
         display: flex;
@@ -264,22 +263,30 @@
         display: inline-block;
     }
 
-    .menu-container nav ol li a {
-        z-index: 200000000000000000;
-        font-family: 'Raleway-Medium', sans-serif;
-        font-weight: 400;
-        font-size: 20px;
+    .menu-item,
+    .menu-item:visited {
+        font-family: 'Raleway-Black', sans-serif;
+        font-weight: 900;
+        font-size: 24px;
         width: 200px;
         margin: 10px;
         text-transform: uppercase;
         text-decoration: none;
+        color: var(--white);
+    }
+
+    .menu-item:hover,
+    .menu-item:focus {
+        color: var(--white);
+        opacity: 80%;
+        text-decoration: underline
     }
 
 /* End Navigation Section */
 
 /* About Section */
     .about-section {
-        background: linear-gradient(-35deg, #002366, #0F52BA, #D83A56, #FF616D);
+        background: linear-gradient(-35deg, #fcc5e4, #ff7882, #7046aa, #020f75);
         background-size: 400% 400%;
         animation: about-gradient 15s ease infinite;
         width: 100%;
@@ -298,7 +305,56 @@
         }
     }
 
+    .about-copy-wrapper {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center
+    }
+
+    .about-header {
+        order: 1;
+        flex: 50%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 40px;
+    }
+
+    .about-header p{
+        color: var(--white);
+        text-transform: uppercase;
+        font-family: 'Raleway-Black', sans-serif;
+        font-size: 50px;
+        font-weight: 900;
+        border-bottom: 4px solid var(--white);
+        padding-right: 10px
+    }
+
+    .about-copy {
+        order: 2;
+        flex: 50%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .about-copy p {
+        color: var(--white);
+        font-family: 'Raleway', sans-serif;
+        font-size: 28px;
+        line-height: 1.2
+    }
+/* End About Section */
+
+/* Footer Section */
 .footer-content {
-    height: 10000px;
-    background-color: white
+    width: 100%;
+    background-color: var(--white)
 }
+
+.footer-copy {
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+/* End Footer Section */
