@@ -263,29 +263,32 @@
 
     #cloud-1 {
         animation-duration: 200s;
-        top: 10%;
+        top: 0;
         left: 50%;
         background-image: url("../images/cloud-1.svg");
         width: 300px;
         height: 80px;
+        animation-delay: -20s
     }
 
     #cloud-2 {
         animation-duration: 100s;
-        top: 12%;
+        top: 200px;
         left: 100%;
         background-image: url("../images/cloud-2.svg");
         width: 300px;
-        height: 54px
+        height: 54px;
+        animation-delay: -80s
     }
 
     #cloud-3 {
         animation-duration: 90s;
-        top: 20%;
+        top: 312px;
         left: 30%;
         background-image: url("../images/cloud-3.svg");
         width: 455px;
-        height: 133px
+        height: 133px;
+        animation-delay: -10s
     }
 
     #cloud-4 {
@@ -294,7 +297,8 @@
         left: 60%;
         background-image: url("../images/cloud-4.svg");
         width: 340px;
-        height: 99px
+        height: 99px;
+        animation-delay: -50s;
     }
 
     #cloud-5 {
@@ -303,7 +307,8 @@
         left: 80%;
         background-image: url("../images/cloud-5.svg");
         width: 420px;
-        height: 84px
+        height: 84px;
+        animation-delay: -100s
     }
 
     #cloud-6 {
@@ -312,7 +317,8 @@
         left: 75%;
         background-image: url("../images/cloud-6.svg");
         width: 281px;
-        height: 81px
+        height: 81px;
+        animation-delay: -5s
     }
 
     #cloud-7 {
@@ -321,16 +327,18 @@
         left: 0;
         background-image: url("../images/cloud-7.svg");
         width: 287px;
-        height: 50px
+        height: 50px;
+        animation-delay: -80s;
     }
 
     #cloud-8 {
         animation-duration: 400s;
-        top: 4px;
+        top: 200px;
         left: 0;
         background-image: url("../images/cloud-8.svg");
         width: 353px;
-        height: 52px
+        height: 95px;
+        animation-delay: -240s;
     }
 
     #cloud-9 {
@@ -339,7 +347,8 @@
         left: 0;
         background-image: url("../images/cloud-9.svg");
         width: 150px;
-        height: 40px
+        height: 40px;
+        animation-delay: -5s
     }
 
     .the-sun {
