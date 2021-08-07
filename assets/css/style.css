@@ -46,77 +46,116 @@
         z-index: -10000;
         width: 100%;
         height: 100vh;
-        background-image: linear-gradient(180deg, #eaa9a9, #FCD8D4);
         position: relative;
         overflow: hidden;
     }
 
+    .hero-background {
+        z-index: -1000;
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(180deg, #eaa9a9, #FCD8D4);
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+    
     .big-cactus-foreground {
-        z-index: -1;
+        z-index: -2;
         bottom: 0;
         left: 80%;
         width: 152px;
-        position: absolute;
+        position: fixed;
         animation-fill-mode: forwards;
-        animation: 5s linear infinite animation
+        animation: 5s linear infinite animation;
+        animation-direction: reverse;
     }
 
     .cactus-foreground-1 {
-        z-index: -2;
-        height: 360px;
-        width: 2000px;
-        left: -100%;
-        bottom: 0;
-        position: absolute;
-    }
-
-    .cactus-foreground-1 {
-        z-index: -2;
+        z-index: -3;
         height: 386px;
         width: 400vw;
         background: url("../images/cactus-foreground-1.svg") repeat-x;
-        animation: cactus-foreground 40s linear infinite;
-        position: absolute;
+        animation: cactus-foreground 20s linear infinite;
+        animation-direction: reverse;
+        position: fixed;
         bottom: 0;
         left: 0
     }
     .cactus-foreground-2 {
-        z-index: -3;
+        z-index: -4;
         height: 360px;
         width: 400vw;
         background: url("../images/cactus-foreground-2.svg") repeat-x;
-        animation: cactus-foreground 50s linear infinite;
-        position: absolute;
+        animation: cactus-foreground 40s linear infinite;
+        animation-direction: reverse;
+        position: fixed;
         bottom: 0;
         left: 0
     }
     .cactus-foreground-3 {
-        z-index: -4;
+        z-index: -5;
         height: 370px;
         width: 400vw;
         background: url("../images/cactus-foreground-3.svg") repeat-x;
-        animation: cactus-foreground 60s linear infinite;
-        position: absolute;
+        animation: cactus-foreground 100s linear infinite;
+        animation-direction: reverse;
+        position: fixed;
         bottom: 0;
         left: 0;
-    }
-    
-    @keframes slide {
-        0% {
-            trnasform: translate3d(0,0,0);
-        }
-        100% {
-            transform: translate3d(400px, 0, 0);
-        }
     }
 
-    .cactus-background-3 {
-        z-index:-4;
+    .rock-formation-background {
+        z-index: -6;
         width: 100%;
-        height: auto;
-        left: 0;
+        height: 650px;
+        position: fixed;
+        background-image: url("../images/rock-formation-background.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         bottom: 0;
+        left: 0
+    }
+
+    .the-sun {
+        --sun-size: 250px;
+        z-index: -7;
+        width: var(--sun-size);
+        height: var(--sun-size);
         position: absolute;
+        left: calc(50% - var(--sun-size)/2);
+        bottom: calc(45% - var(--sun-size));
+        background-image: url("../images/sun.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .clouds {
+        z-index: -8;
+        width: 100%;
+        height: 305px;
+        position: fixed;
+        background-image: url("../images/clouds.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        top: 0;
+        left: 0;
+    }
+
+    .background-lines {
+        z-index: -8;
+        width: 100%;
+        height: 685px;
+        position: fixed;
+        background-image: url("../images/background-lines.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        bottom: 0;
+        left: 0;
     }
 
     @keyframes cactus-foreground {
@@ -171,3 +210,7 @@
     }
 
 /* End Navigation Section */
+
+.footer-content {
+    height: 10000px;
+}
