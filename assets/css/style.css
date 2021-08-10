@@ -72,12 +72,18 @@
 /* End Responsive Contaienr */
 
 /* Header Section */
-    .header-section {
-        /* z-index: -10000; */
+    /* .header-section {
         width: 100%;
         height: 100vh;
         position: relative;
         overflow: hidden;
+    } */
+
+    .header-wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100vh
     }
 
     .hero-background {
@@ -88,22 +94,6 @@
         position: fixed;
         left: 0;
         top: 0;
-    }
-
-    .big-cactus-foreground {
-        z-index: -1;
-        bottom: 0;
-        left: 80%;
-        background: url("../images/big-cactus-foreground.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        width: 152px;
-        height: 236px;
-        position: fixed;
-        animation: 6s linear infinite animation;
-        animation-fill-mode: forwards;
-        animation-direction: reverse;
     }
 
     .big-truck-container {
@@ -418,6 +408,12 @@
         left: 0;
     }
 
+    @media only screen and (max-width: 768px) {
+        .road {
+            height: 30px
+        }
+    }
+
     .cactus-foreground-1 {
         z-index: -3;
         height: 386px;
@@ -465,6 +461,68 @@
         background-size: cover;
         bottom: 0;
         left: 0
+    }
+
+    .big-cactus-foreground {
+        --big-cactus-width: 156px;
+        --big-cactus-height: calc(var(--big-cactus-width) * 1.557692307692308);
+        z-index: -1;
+        bottom: 0;
+        left: 80%;
+        background: url("../images/big-cactus-foreground.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: var(--big-cactus-width);
+        height: var(--big-cactus-height);
+        position: fixed;
+        animation: 6s linear infinite animation;
+        animation-fill-mode: forwards;
+        animation-direction: reverse;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .cactus-foreground-3 {
+            height: 260px
+        }
+
+        .cactus-foreground-2 {
+            height: 234px
+        }
+        
+        .cactus-foreground-1 {
+            height: 300px
+        }
+
+        .big-cactus-foreground {
+            --big-cactus-width: 87px
+        }
+
+        .rock-formation-background {
+            height: 460px
+        }
+    }
+
+    @media only screen and (max-width: 550px) {
+        .cactus-foreground-3 {
+            height: 167px
+        }
+
+        .cactus-foreground-2 {
+            height: 162px
+        }
+        
+        .cactus-foreground-1 {
+            height: 207px
+        }
+
+        .big-cactus-foreground {
+            --big-cactus-width: 44px
+        }
+
+        .rock-formation-background {
+            height: 313px
+        }
     }
 
     .cloud-container {
@@ -584,6 +642,56 @@
         animation-delay: -5s
     }
 
+    @media only screen and (max-width: 550px) {
+        #cloud-1 {
+            top: 110px;
+            width: 150px;
+            height: 40px;
+        }
+
+        #cloud-2 {
+            width: 150px;
+            height: 27px
+        }
+
+        #cloud-3 {
+            width: 225px;
+            height: 65px
+        }
+
+        #cloud-4 {
+            width: 170px;
+            height: 50px
+        }
+
+        #cloud-5 {
+            width: 210px;
+            height: 42px
+        }
+
+        #cloud-6 {
+            width: 140px;
+            height: 40px
+        }
+
+        #cloud-7 {
+            top: -15px;
+            width: 315px;
+            height: 50px
+        }
+
+        #cloud-8 {
+            width: 175px;
+            height: 47px
+        }
+
+        #cloud-9 {
+            top: 3px;
+            width: 75px;
+            height: 20px
+        }
+    }
+
     .the-sun {
         --sun-size: 250px;
         z-index: -8;
@@ -614,6 +722,44 @@
         font-family: 'Raleway-Black', sans-serif;
         font-size: 50px;
         font-weight: 900;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .hero-text {
+            bottom: calc(55% - 400px)
+        }
+
+        .the-sun {
+            bottom: calc(50% - var(--sun-size));
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .the-sun {
+            --sun-size: 140px
+        }
+
+        .hero-text {
+            bottom: calc(55% - 300px)
+        }
+    }
+
+    @media only screen and (max-width: 550px) {
+        .hero-text {
+            width: 380px;
+            left: calc(50% - 380px/2);
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
+        .hero-text {
+            left: calc(50% - 300px/2);
+            bottom: calc(60% - 300px);
+            width: 300px
+        }
+        .hero-text p {
+            font-size: 30px
+        }
     }
 
     .clouds {
